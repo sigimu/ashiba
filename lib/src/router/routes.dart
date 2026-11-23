@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../screen/home/home_screen.dart';
 import '../screen/login/login_screen.dart';
 import '../widget/presentation/main_shell/main_shell.dart';
 import '../widget/presentation/placeholder_view/placeholder_view.dart';
@@ -16,10 +17,7 @@ final List<RouteBase> appRoutes = [
     builder: (context, state, navigationShell) =>
         MainShell(navigationShell: navigationShell),
     branches: [
-      _branch(
-        RoutePath.home,
-        const PlaceholderView(title: 'ホーム', icon: Icons.home_outlined),
-      ),
+      _branch(RoutePath.home, const HomeScreen()),
       _branch(
         RoutePath.documents,
         const PlaceholderView(title: '書類', icon: Icons.description_outlined),
