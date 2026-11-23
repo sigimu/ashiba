@@ -7,9 +7,9 @@ sealed class Result<T> {
 
   /// 成功値。失敗時は null。
   T? get valueOrNull => switch (this) {
-        Success<T>(:final value) => value,
-        Failure<T>() => null,
-      };
+    Success<T>(:final value) => value,
+    Failure<T>() => null,
+  };
 }
 
 /// 成功。
