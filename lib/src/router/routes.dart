@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../screen/login/login_screen.dart';
 import '../widget/presentation/main_shell/main_shell.dart';
 import '../widget/presentation/placeholder_view/placeholder_view.dart';
 import 'route_path.dart';
@@ -9,8 +10,7 @@ import 'route_path.dart';
 final List<RouteBase> appRoutes = [
   GoRoute(
     path: RoutePath.login,
-    builder: (context, state) =>
-        const PlaceholderView(title: 'ログイン', icon: Icons.login),
+    builder: (context, state) => const LoginScreen(),
   ),
   StatefulShellRoute.indexedStack(
     builder: (context, state, navigationShell) =>
